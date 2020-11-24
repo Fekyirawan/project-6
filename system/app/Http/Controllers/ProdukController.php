@@ -67,7 +67,16 @@ class ProdukController extends Controller{
 	// $data['list_produk'] = produk::whereNotIn('stok', $stok)->get();
 	//$data['list_produk'] = produk::whereNotBetween('harga', [$harga_min, $harga_max])->get();
 	// $data['list_produk'] = produk::whereNull('stok')->get();
-	$data['list_produk'] = produk::whereNotNull('stok')->get();
+	// $data['list_produk'] = produk::whereNotNull('stok')->get();
+	// $data['list_produk'] = produk::whereNotNull('stok')->get();
+	//$data['list_produk'] = produk::whereDate('created_at', '2020-11-')->get();
+	// $data['list_produk'] = produk::whereDate('created_at', '2020-11-13', '2020-11-15')->get();
+	//$data['list_produk'] = produk::whereMonth('created_at', '19')->produk::whereYear('created_at', '2020')->get();
+	//$data['list_produk'] = produk::whereTime('created_at', '08:31:37')->get();
+	// $data['list_produk'] = produk::whereBetween('harga', [$harga_min, $harga_max])-> produk::whereYear('created_at', '2020')->get();
+	// $data['list_produk'] = produk::whereBetween('harga', [$harga_min, $harga_max])-> produk::whereNotIn('stok', [750])-> produk::whereYear('created_at', '2020')->get();
+
+
 
 	$data['nama'] = $nama;
 	$data['stok'] = request('stok');
